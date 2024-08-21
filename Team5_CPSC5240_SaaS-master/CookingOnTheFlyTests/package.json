@@ -1,0 +1,34 @@
+{
+  "name": "cookingontheflytests",
+  "version": "0.2.0",
+  "author": "Aacer Daken",
+  "description": "A simple mocha test for Cooking on The Fly",
+  "contributors": [
+    {
+      "name": "Aacer Daken",
+      "email": "dakena@seattleu.edu"
+    }
+  ],
+  "main": "./server.js",
+  "keywords": [
+    "azure",
+    "boilerplate",
+    "express"
+  ],
+  "dependencies": {
+    "assert": "*",
+    "async": "^2.6.4",
+    "chai": "^4.4.1",
+    "chai-http": "^4.0.0",
+    "mocha": "^10.4.0",
+    "q": "^1.5.1"
+  },
+  "noAnalyze": true,
+  "license": "Apache",
+  "engines": {
+    "node": ">=0.12.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6"
+  }
+}

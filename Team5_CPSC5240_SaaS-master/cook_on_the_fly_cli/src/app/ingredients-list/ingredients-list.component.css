@@ -1,0 +1,59 @@
+.center-card {
+  max-width: 60%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.mat-checkbox {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.mat-checkbox-ripple .mat-ripple-element,
+.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: peru !important;
+}
+
+
+/* Modified CSS for the table layout */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  vertical-align: top;
+  padding: 1px; /* Reduced padding to decrease space between columns */
+}
+
+.example-full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+button {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  background-color: aliceblue;
+  margin-top: 20px;
+}
+button.custom-button {
+  background-color: peru; /* Replace with your desired color */
+  color: white; /* Replace with your desired text color */
+}
+
+button.custom-button:disabled {
+  background-color: #cccccc; /* Replace with your desired disabled color */
+  color: #666666; /* Replace with your desired disabled text color */
+}
+

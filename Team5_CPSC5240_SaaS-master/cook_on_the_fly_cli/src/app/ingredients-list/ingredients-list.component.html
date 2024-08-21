@@ -1,0 +1,29 @@
+<!-- Ingredient Search Section -->
+<mat-card class="center-card">
+  <mat-card-header>
+    Search by Ingredients
+  </mat-card-header>
+  <mat-card-content>
+    <!-- Add a search bar -->
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Search Ingredients</mat-label>
+      <input matInput [(ngModel)]="searchText" (keyup)="onSearch()" placeholder="Search ingredients">
+    </mat-form-field>
+    <table>
+      <tr>
+        <th *ngFor="let category of ingredients | keyvalue">{{category.key}}</th>
+      </tr>
+      <tr>
+        <td *ngFor="let category of ingredients | keyvalue">
+          <!-- Add a condition to only display the categories that have at least one ingredient -->
+          <div *ngIf="category.value.length > 0">
+            <div *ngFor="let ingredient of category.value">
+              <mat-checkbox color = "primary" [checked]="ingredient.selected" (change)="onIngredientToggle(ingredient)">{{ingredient.name}}</mat-checkbox>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <button mat-raised-button class="custom-button" (click)="onSubmit()" [disabled]="selectedIngredients.length === 0">Search</button>
+  </mat-card-content>
+</mat-card>

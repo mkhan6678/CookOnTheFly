@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/2696016.jpg');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat;
+        }
+        .navbar {
+            background-color: hsla(25, 76%, 31%, 0.8);
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #A0522D; !important;
+        }
+        .card {
+            border: none; /* No border for cards */
+        }
+        .card-img-top {
+            border-radius: 0; /* Remove border-radius for card images */
+        }
+        .card-title {
+            color: #343a40;
+        }
+        .card-text {
+            color: #0056b3;
+        }
+</style>
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Cooking on the Fly</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="#">Subscribe</a>
+            <a class="nav-link" href="#">Sign In</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br>
+<div class="d-flex justify-content-center mb-3">
+    <form class="form-inline my-2 my-lg-0 w-50">
+        <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search" aria-label="Search">
+        <style> .form-control {background-color: rgba(210, 180, 140, 0.1); border: 1px solid #654321  } .form-control::placeholder {
+                                                                                                            color: #654321;
+                                                                                                        }</style>
+    </form>
+</div>
+<!-- Main Content -->
+<div class="container">
+    <h2 class="mb-4"><br><center>Trending Recipes of the Day</center></h2><br>
+    <style>.text-center {
+        text-align: center;
+    }
+
+    h2.mb-4 {
+        color: #8B4513;
+        margin-bottom: 16px;
+    }</style>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://tatyanaseverydayfood.com/wp-content/uploads/2016/03/Creamy-Chicken-Potato-Casserole.jpg" class="card-img-top" width = 300px height= 300px alt="Recipe Image">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken and Potatoes Casserole</h5>
+                    <p class="card-text">calories: 662</p>
+                    <a href="#" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div><style>
+            .card {
+                background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+                border: none; /* Optional: removes the border */
+            }
+
+            .card-title, .card-text {
+                color: #8B4513; /* Sets the color to a Bootstrap themed purple */
+            }
+
+            .btn-primary {
+                background-color: #007bff; /* Bootstrap primary blue */
+                border-color: #007bff; /* Ensures the border is the same as background */
+            }
+
+            .btn-primary:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+                border-color: #0056b3;
+            }
+        </style>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://www.cookingclassy.com/wp-content/uploads/2019/07/beef-and-broccoli-7-768x1152.jpg" class="card-img-top" width = 300px height= 300px alt="Recipe Image">
+                <div class="card-body">
+                    <h5 class="card-title">beef broccoli</h5>
+                    <p class="card-text">calories: 445</p>
+                    <a href="#" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://entertainingwithbeth.com/wp-content/uploads/2022/09/ShrimpScampiRecipe_Featured-540x720.jpg" class="card-img-top" width = 300px height= 300px alt="Recipe Image">
+                <div class="card-body">
+                    <h5 class="card-title">Tomato Shrimp Pasta</h5>
+                    <p class="card-text">calories: 612</p>
+                    <a href="#" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>About Us</h5>
+                <p>SaaS Project</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Contact Us</h5>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: mkhan3@seattleu.edu</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

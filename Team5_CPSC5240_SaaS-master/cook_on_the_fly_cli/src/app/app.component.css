@@ -1,0 +1,142 @@
+
+/* Change color when hovered */
+.nav-item .btn:hover,
+.nav-item .btn:active {
+  color: #654321;
+}
+
+h1{
+  font-size: 40px;
+}
+
+
+.full-page{
+  background-image: url('../2696016 (1).jpg');
+  background-repeat: repeat repeat;
+  background-position: center;
+  background-size: auto;
+  background-attachment: fixed;
+  min-height: 100%;
+  min-width:100%;
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex{
+  background-color: peru;
+  color: beige;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* Style for the header containing the lower bar */
+header {
+  background-color: peru;
+  color: beige;
+}
+
+/* Style the navigation bar text */
+.nav-link {
+  color: beige;
+}
+.nav-link:hover, .nav-link:focus {
+  color: #4a4a4a;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Adjust the gap as needed */
+  flex-wrap: wrap;
+  background-color: peru;
+  color: beige;
+}
+
+.custom-button {
+  background-color: peru;
+  border-color: peru;
+  color: beige; /* Adjust the text color */
+  width: 183px;
+}
+
+.custom-button:hover {
+  background-color: #EAC086; /* Adjust the hover color */
+  border-color: #EAC086;
+  color: #4a4a4a;
+}
+
+.main-container {
+  display: flex;
+}
+.sidebar {
+  position: fixed;
+  top: 90px; /* Adjust this value to match the height of your hamburger icon */
+  bottom: 0;
+  left: 0;
+  width: 18rem;
+  padding: 1rem 1rem;
+  background-color: rgba(205, 133, 63, 0.5);
+  flex-shrink: 0;
+}
+
+
+.nav .nav-link {
+  font-weight: 500;
+  color: beige; /* Adjusted the text color */
+}
+
+.nav .nav-link:hover,
+.nav .nav-link:focus {
+  color: #4a4a4a;
+}
+
+.sidebar ul li {
+  margin-bottom: 2rem; /* Added this line */
+}
+
+
+
+.hamburger {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.login-button {
+  align-self: center;
+}
+
+.user-info {
+  background-color: rgba(255, 255, 255, 0.5); /* white with 50% opacity */
+  border: 1px solid #ddd; /* light gray border */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+
+
+
+

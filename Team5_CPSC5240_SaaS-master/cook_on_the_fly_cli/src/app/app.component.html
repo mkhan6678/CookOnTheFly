@@ -1,0 +1,65 @@
+<div class = "full-page">
+  <header class="jumbotron">
+    <h1><a [routerLink]="['']" class="nav-link" role="button"> Cook On The Fly</a></h1>
+    <button *ngIf="isLoggedIn" class="hamburger" (click)="toggleSidebar()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </button>
+    <div class="nav-container">
+      <ul class="nav nav-pills">
+        <li>
+          <a [routerLink]="['']" class="btn btn-lg custom-button" role="button">Home</a>
+        </li>
+        <li>
+          <a [routerLink]="['recipe']" class="btn btn-lg custom-button" role="button">Recipes</a>
+        </li>
+        <li>
+          <a [routerLink]="['ingredients']" class="btn btn-lg custom-button" role="button">Ingredients</a>
+        </li>
+      </ul>
+      <div class="login-button">
+        <a *ngIf="!isLoggedIn" class="btn btn-lg custom-button" href="/auth/google" role="button">Google Login</a>
+        <a *ngIf="isLoggedIn" class="btn btn-lg custom-button" href="/auth/google/logout" role="button">Sign Out</a>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="main-container">
+    <div *ngIf="sidebarVisible && isLoggedIn" class="sidebar">
+      <div class="user-info">
+        <h3>Welcome, {{username}}</h3>
+        <p>Email: {{email}}</p>
+        <p>ID: {{userId}}</p>
+      </div>
+
+      <ul class="nav flex-column">
+        <li>
+          <a class="btn btn-lg custom-button" [routerLink]="['created-recipe']" role="button">Created Recipes</a>
+        </li>
+        <li>
+          <a class="btn btn-lg custom-button" [routerLink]="['saved-recipe']" role="button">Saved Recipes</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="content-area" [ngStyle]="{'margin-left': sidebarVisible && isLoggedIn ? '20rem' : '0'}">
+    <router-outlet></router-outlet>
+  </div>
+
+  <header class="d-flex justify-content-end">
+    <ul class="nav nav-pills">
+      <li>
+        <a [routerLink]="['privacy-policy']" class="nav-link" role="button">Privacy Policy</a>
+      </li>
+      <li>
+        <a [routerLink]="['about']" class="nav-link" role="button">About</a>
+      </li>
+      <li>
+        <a [routerLink]="['contact-us']" class="nav-link" role="button">Contact us</a>
+      </li>
+    </ul>
+  </header>
+</div>

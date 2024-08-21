@@ -1,0 +1,79 @@
+<!-- recipe-details.component.html -->
+
+<div class="container my-4 mat-typography">
+  <!-- Display the error message if it exists -->
+
+  <mat-card class="recipe-details-box">
+    <mat-card-header class="recipe-details-box" *ngIf="errorMessage">
+      <mat-card-title class="text-danger">ERROR</mat-card-title>
+      <mat-card-title>{{ errorMessage }}</mat-card-title>
+    </mat-card-header>
+
+  <!-- Show recipe details only if there's no error -->
+    <ng-container *ngIf="!errorMessage">
+        <mat-card-header class="recipe-details-box">
+          <mat-card-title class="h1">
+            {{ recipeDetails?.name }}
+          </mat-card-title>
+          <mat-card-title class="h4">
+            {{recipeDetails?.cuisine}}
+          </mat-card-title>
+        </mat-card-header>
+      <mat-card-content>
+
+        <!-- Display the recipe image -->
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <br>
+            <carousel class="carousel slide" data-ride="carousel" [showIndicators] = "true" [interval]="5000" [@slide]="'in'">
+              <slide *ngFor="let imageUrl of recipeDetails?.images; let i = index" [ngClass]="{'active': i === 0}">
+                <img class="recipe-img" [src]="imageUrl" alt="...">
+              </slide>
+            </carousel>
+            <br>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+<!--        <div>-->
+<!--          <mat-carousel timings="250ms ease-in" [autoplay]="true" [loop]="true" [hideArrows]="true" [hideIndicators]="true" [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">-->
+<!--            <mat-carousel-slide #matCarouselSlide *ngFor="let imageUrl of recipeDetails.images; let i = index" [image]="imageUrl" overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>-->
+<!--          </mat-carousel>-->
+<!--        </div>-->
+        <div class="row">
+          <!-- list all ingredients of the recipe -->
+          <div class="col-md-6">
+            <h3><b>Ingredients:</b></h3>
+            <ul class="mat-typography" *ngFor="let ingredient of recipeIngredients">
+              <li class ='font= mat-typography'>{{ ingredient.name }}</li>
+            </ul>
+          </div>
+          <!-- list recipe description and steps -->
+          <div class="col-md-6">
+            <h3><b>Recipe Details:</b></h3>
+            <div *ngFor="let step of recipeDetails?.description">
+              <p style="margin-bottom: 3px">{{ step }}</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- list ratings and feedback -->
+        <div class="row">
+          <div class="col-md-6">
+            <h3><b>Feedback:</b></h3>
+            <mat-list *ngFor="let feedback of recipeFeedback">
+              <li class="mat-typography" ><b>Comment:</b> {{ feedback.comment }}</li>
+              <li class="mat-typography"> <b>Rating:</b> {{ feedback.ratings }}/5</li>
+            </mat-list>
+          </div>
+          <div class="col-md-6">
+            <h3><b>Rating:</b></h3>
+            <p>{{ recipeDetails?.ratings }}/5</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </ng-container>
+  </mat-card>
+  <br><br><br>
+</div>

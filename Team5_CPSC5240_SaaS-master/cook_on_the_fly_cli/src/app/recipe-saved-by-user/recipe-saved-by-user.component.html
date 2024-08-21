@@ -1,0 +1,31 @@
+<div class="container mt-4 recipe-container mat-typography">
+  <div class="recipes-list row justify-content-center">
+    <h1 class="row justify-content-center">{{ pageTitle }}</h1>
+
+    <mat-card class="recipe-card col-md-3 m-2" (click)="onSubmit(recipe.recipeId)" *ngFor="let recipe of userRecipes">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-md-12">
+            <img class="recipe-img" [src]="recipe.images[0]" alt="Recipe Image" *ngIf="recipe.images && recipe.images.length > 0">
+          </div>
+          <div class="col-md-12">
+            <div class="recipe-details">
+              <h3>{{ recipe.name }}</h3>
+              <p><strong>Cuisine: </strong>{{ recipe.cuisine }}</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div>
+              <p><strong>Ratings: </strong>{{ recipe.ratings }}/5</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <div class="error-container" *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  <br><br><br>
+</div>
